@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viemport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+        --------------------------mongodb操作--------------------------------------
+    </h2>
+    <form name="myForm" action="/input"  method="GET">
+        数据1: <input type="text" name="first"><br>
+        数据2:<input type="text" name="second"><br>
+        <input type="submit" value="submit1" name="写入">
+        <input type="submit" value="submit2" name="读取">
+        <!-- <input type="submit" value="*" name="submit1">
+        <input type="submit" value="/" name="submit1"> -->
+
+    </form>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["first"].value;
+            var y = document.forms["myForm"]["second"].value;
+            if (parseFloat(x).toString() === 'NaN') {
+                alert("请正确输入算数1" + typeof (x));
+                return false;
+            }
+            if (parseFloat(y).toString() === 'NaN') {
+                alert("请正确输入算数2" + typeof (y));
+                return false;
+            }
+        }
+    </script>
+        <!-- <h2>
+            --------------------------post--------------------------------------
+        </h2>
+        <form name="myForm" action="/input" onsubmit="return validateForm()" method="GET">
+            算数1: <input type="text" name="first"><br>
+            算数2:<input type="text" name="second"><br>
+            <input type="submit" value="+" name="submit1">
+            <input type="submit" value="-" name="submit1">
+            <input type="submit" value="*" name="submit1">
+            <input type="submit" value="/" name="submit1">
+    
+        </form>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["first"].value;
+                var y = document.forms["myForm"]["second"].value;
+                if (parseFloat(x).toString() === 'NaN') {
+                    alert("请正确输入算数1" + typeof (x));
+                    return false;
+                }
+                if (parseFloat(y).toString() === 'NaN') {
+                    alert("请正确输入算数2" + typeof (y));
+                    return false;
+                }
+            }
+        </script> -->
+</body>
+
+</html>
